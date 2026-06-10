@@ -1558,3 +1558,90 @@ footer {
     font-size: 28px;
     cursor: pointer;
 }
+
+
+/* Review Popup Background */
+
+.review-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .35);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+    z-index: 9999;
+}
+
+.review-modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* Popup Box */
+
+.review-popup {
+    width: 90%;
+    max-width: 500px;
+    background: #fff;
+    border-radius: 18px;
+    padding: 30px;
+    position: relative;
+    animation: popup .3s ease;
+}
+
+@keyframes popup {
+    from {
+        transform: scale(.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.close-review {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 30px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.review-popup form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.review-popup input,
+.review-popup select,
+.review-popup textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.review-popup button {
+    background: #25D366;
+    color: #fff;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.review-popup button:hover {
+    background: #1da851;
+}
