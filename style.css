@@ -1880,3 +1880,78 @@ footer {
     }
 
 }
+
+/* ==========================================
+   FORCE DESKTOP NAVBAR ON MOBILE
+   Paste at END of style.css
+   ========================================== */
+
+@media screen and (max-width:768px){
+
+    /* Hide Hamburger */
+    .hamburger{
+        display:none !important;
+    }
+
+    /* Hide Popup Menu */
+    .mobile-menu{
+        display:none !important;
+    }
+
+    /* Navbar Layout */
+    .nav-inner{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        gap:12px;
+    }
+
+    /* Show Links */
+    .nav-links{
+        display:flex !important;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:12px;
+        width:100%;
+    }
+
+    .nav-links li{
+        list-style:none;
+    }
+
+    .nav-links a{
+        font-size:14px;
+        padding:6px 10px;
+        white-space:nowrap;
+    }
+
+    /* Show Book Button */
+    .nav-cta{
+        display:flex !important;
+        justify-content:center;
+        align-items:center;
+        padding:10px 20px;
+        font-size:14px;
+    }
+
+    /* Logo Center */
+    .nav-logo{
+        justify-content:center;
+    }
+
+    .logo-text{
+        font-size:1.3rem;
+    }
+
+    /* Navbar Height Auto */
+    .navbar{
+        padding:12px 0;
+    }
+
+    /* Hero Down */
+    .hero{
+        padding-top:180px;
+    }
+
+}
